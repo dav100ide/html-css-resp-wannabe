@@ -136,7 +136,7 @@ img {
       border: 2px dashed red;
    }
    .container {
-      max-width: 700px;
+      max-width: 100%;
    }
 }
 /* targets tutti i vw sotto i 480px compresi */
@@ -144,10 +144,23 @@ img {
    section {
       border: 2px dashed green;
    }
-   .container {
-      min-width: 450px;
-   }
+
    .row {
       flex-flow: column nowrap;
+   }
+   :is(.lessons, .steps, .why-us) .col {
+      width: 100%;
+   }
+
+   .lessons,
+   .steps,
+   .why-us {
+      margin: 0 auto;
+      padding-bottom: 3rem;
+   }
+
+   .why-us {
+      background-color: #222222;
+      padding-top: 3rem;
    }
 }
